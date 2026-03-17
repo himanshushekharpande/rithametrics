@@ -1,0 +1,5 @@
+colorScheme = "terminal"
+
+homepage.layout = "profile"
+homepage.showRecent = true
+homepage.recentLimit = 6

@@ -1,0 +1,19 @@
+[[main]]
+name = "Doctrine"
+pageRef = "doctrine"
+weight = 10
+
+[[main]]
+name = "Domains"
+pageRef = "domains"
+weight = 20
+
+[[main]]
+name = "Methodology"
+pageRef = "methodology"
+weight = 30
+
+[[main]]
+name = "Engagement"
+pageRef = "engagement"
+weight = 40
