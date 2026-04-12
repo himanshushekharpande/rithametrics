@@ -1,3 +1,89 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://rithametrics.com/'
 languageCode = 'en-us'
-title = 'My New Hugo Project'
+title = 'Rithametrics'
+theme = "nomad-tech"
+
+[pagination]
+  pagerSize = 6
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[params]
+  author = "Rithametrics"
+  logo = "RITHAMETRICS"
+  logoSVG = "images/logo-web.webp"
+
+  # 🔥 CORE POSITIONING (UPDATED)
+  subtitle = "Clarity for Any Problem. No Bias. No Agenda."
+  description = "If something feels off — in business, decisions, or life — get a second opinion that is structured, unbiased, and focused on your outcome."
+
+  # 🔥 CONTACT (SINGLE SOURCE OF TRUTH)
+  call_number = "+918860860737"
+  whatsapp = "https://wa.me/918860860737"
+  email = "support@rithametrics.com"
+
+  # 🔥 SERVICES → reframed as problem domains
+  [[params.services]]
+    title = "Business & Work Problems"
+    description = "Confusion in strategy, execution, or direction — get clarity on what actually matters."
+
+  [[params.services]]
+    title = "Website & Funnel Issues"
+    description = "If something isn’t converting or performing, identify the real bottleneck."
+
+  [[params.services]]
+    title = "Decision Confusion"
+    description = "When choices feel overwhelming, break them down into clear, rational paths."
+
+  [[params.services]]
+    title = "Second Opinion (Any Problem)"
+    description = "Sometimes you just need an unbiased perspective — no assumptions, no agenda."
+
+  # 🔥 PROCESS (kept simple, aligned with phone-first model)
+  [[params.process]]
+    step = "01"
+    title = "Reach Out"
+    description = "Call or WhatsApp with your situation."
+
+  [[params.process]]
+    step = "02"
+    title = "Clarify"
+    description = "We break down the problem to its core."
+
+  [[params.process]]
+    step = "03"
+    title = "Consult"
+    description = "You get direct, structured guidance."
+
+  [[params.process]]
+    step = "04"
+    title = "Act"
+    description = "You decide and execute with clarity."
+
+  # 🔥 CONTACT (CLEAN + TRUSTED)
+  [[params.contact]]
+    name = "Call"
+    value = "+918860860737"
+
+  [[params.contact]]
+    name = "WhatsApp"
+    value = "https://wa.me/918860860737"
+
+  [[params.contact]]
+    name = "Email"
+    value = "support@rithametrics.com"
+
+  # 🔥 TRUST (CRITICAL FOR YOUR MODEL)
+  [[params.trust]]
+    title = "Unbiased Perspective"
+    description = "No product to sell. No service to push. Only clarity."
+
+  [[params.trust]]
+    title = "Direct Access"
+    description = "You speak directly with the person analyzing your problem."
+
+  [[params.trust]]
+    title = "Pay What You Feel"
+    description = "Value first. Payment after — based on your judgment."

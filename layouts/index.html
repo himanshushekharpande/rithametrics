@@ -1,0 +1,100 @@
+{{ define "main" }}
+
+<!-- HERO -->
+<section class="hero has-video-bg">
+  <div class="video-bg-wrap">
+    <video autoplay loop muted playsinline preload="auto">
+      <source src="/videos/hero-bg-opt.webm" type="video/webm">
+      <source src="/videos/hero-bg.webm" type="video/webm">
+    </video>
+    <div class="video-bg-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <h1>{{ .Site.Title }}</h1>
+    <p>{{ .Site.Params.subtitle }}</p>
+    <p>{{ .Site.Params.description }}</p>
+    <div class="cta-buttons">
+      <a href="tel:{{ .Site.Params.call_number }}" class="btn btn-primary">📞 Call Now</a>
+      <a href="{{ .Site.Params.whatsapp }}" class="btn btn-secondary">💬 WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="content-section active has-video-bg">
+  <div class="video-bg-wrap">
+    <video autoplay loop muted playsinline preload="auto">
+      <source src="/videos/services-bg.webm" type="video/webm">
+    </video>
+    <div class="video-bg-overlay"></div>
+  </div>
+  <div class="container">
+    <h2>What You Get</h2>
+    <div class="portfolio-grid">
+      {{ range .Site.Params.services }}
+      <div class="portfolio-item">
+        <div class="portfolio-content">
+          <h3>{{ .title }}</h3>
+          <p>{{ .description }}</p>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="content-section active has-video-bg">
+  <div class="video-bg-wrap">
+    <video autoplay loop muted playsinline preload="auto">
+      <source src="/videos/process-bg.webm" type="video/webm">
+    </video>
+    <div class="video-bg-overlay"></div>
+  </div>
+  <div class="container">
+    <h2>How It Works</h2>
+    <div class="process-flow">
+      {{ range .Site.Params.process }}
+      <div class="process-step">
+        <div class="process-number">{{ .step }}</div>
+        <div class="process-body">
+          <h3>{{ .title }}</h3>
+          <p>{{ .description }}</p>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="content-section active has-video-bg">
+  <div class="video-bg-wrap">
+    <video autoplay loop muted playsinline preload="auto">
+      <source src="/videos/contact-bg.webm" type="video/webm">
+    </video>
+    <div class="video-bg-overlay"></div>
+  </div>
+  <div class="container">
+    <h2>Get in Touch</h2>
+    <div class="portfolio-grid">
+      {{ range .Site.Params.contact }}
+      <div class="portfolio-item">
+        <div class="portfolio-content">
+          <h3>{{ .icon }} {{ .name }}</h3>
+          <p>{{ .value }}</p>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="tel:{{ .Site.Params.call_number }}" class="btn btn-primary">📞 Call</a>
+      <a href="{{ .Site.Params.whatsapp }}" class="btn btn-secondary">💬 WhatsApp</a>
+    </div>
+    <p style="text-align:center; margin-top:1rem;">
+      <strong>Payment:</strong> Pay what you feel via UPI after consultation.
+    </p>
+  </div>
+</section>
+
+{{ end }}
