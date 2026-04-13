@@ -172,6 +172,27 @@
   }
 }
 
+// Footer contact links on mobile
+@media (max-width: 768px) {
+  .footer-sep {
+    display: none;
+  }
+
+  footer p a {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+}
+
+// Contact section CTA buttons — stack with gap on mobile
+@media (max-width: 768px) {
+  #contact .btn {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 1rem auto;
+  }
+}
+
 // patch hardcoded rgba values from theme main.scss
 .hero {
   background: radial-gradient(circle at 50% 50%, rgba(240, 208, 56, 0.1) 0%, transparent 50%);
