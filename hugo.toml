@@ -2,6 +2,7 @@ baseURL = 'https://rithametrics.com/'
 languageCode = 'en-us'
 title = 'Rithametrics'
 theme = "nomad-tech"
+disableKinds = ["taxonomy", "term"]
 
 [pagination]
   pagerSize = 6
@@ -87,8 +88,3 @@ theme = "nomad-tech"
   [[params.trust]]
     title = "Pay What You Feel"
     description = "Value first. Payment after — based on your judgment."
-
-
-[outputs]
-  home = ["HTML", "RSS", "Sitemap"]
-  disableKinds = ["taxonomy", "term"]
