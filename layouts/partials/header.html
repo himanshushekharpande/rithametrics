@@ -4,14 +4,14 @@
 
             <!-- LOGO -->
             <a href="{{ .Site.BaseURL }}" class="logo" aria-label="{{ .Site.Title }} - Home">
-              {{ if .Site.Params.logoSVG }}
-                <img
-                  src="{{ .Site.Params.logoSVG | relURL }}"
-                  alt="{{ .Site.Title }}"
-                  class="logo-icon"
-                  width="32"
-                  height="32"
-                />
+              {{ if .Site.Params.logoImage }}
+              <img
+              src="{{ .Site.Params.logoImage | relURL }}"
+              alt="{{ .Site.Title }}"
+              class="logo-icon"
+              width="32"
+              height="32"
+              />
               {{ end }}
               <span class="logo-text">{{ .Site.Params.logo | default "RITHAMETRICS" }}</span>
             </a>

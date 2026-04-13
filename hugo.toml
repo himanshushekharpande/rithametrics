@@ -14,7 +14,7 @@ disableKinds = ["taxonomy", "term"]
 [params]
   author = "Rithametrics"
   logo = "RITHAMETRICS"
-  logoSVG = "images/logo-web.webp"
+  logoImage = "images/logo-web.webp"
 
   # 🔥 CORE POSITIONING (UPDATED)
   subtitle = "Clarity for Any Problem. No Bias. No Agenda."
