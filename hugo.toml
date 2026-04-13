@@ -87,3 +87,8 @@ theme = "nomad-tech"
   [[params.trust]]
     title = "Pay What You Feel"
     description = "Value first. Payment after — based on your judgment."
+
+
+[outputs]
+  home = ["HTML", "RSS", "Sitemap"]
+  disableKinds = ["taxonomy", "term"]
