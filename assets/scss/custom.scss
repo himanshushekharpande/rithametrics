@@ -25,6 +25,88 @@
   display: block;
 }
 
+// Social Icons in Navbar
+.nav-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-left: 1.5rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  
+  svg {
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  &:hover {
+    color: var(--primary-color);
+    transform: translateY(-2px);
+  }
+}
+
+// Social icons inside mobile menu
+.social-nav-item {
+  .social-icon {
+    margin-right: 8px;
+  }
+  
+  .social-label {
+    display: inline;
+  }
+}
+
+// Hide desktop social items from mobile menu
+.desktop-social {
+  display: none !important;
+}
+
+// Mobile responsive styles
+@media (max-width: 768px) {
+  .nav-social-icons {
+    display: none; // Hide desktop social container on mobile
+  }
+  
+  // Show social items in mobile menu
+  .desktop-social {
+    display: block !important;
+  }
+  
+  .social-nav-item a {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    
+    .social-icon {
+      margin-right: 12px;
+    }
+    
+    .social-label {
+      color: inherit;
+    }
+  }
+}
+
+// Desktop specific
+@media (min-width: 769px) {
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .nav-links {
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
 .process-flow {
   display: flex;
   flex-direction: column;
