@@ -42,8 +42,12 @@ enableRobotsTXT = true
     description = "When choices feel overwhelming, break them down into clear, rational paths."
 
   [[params.services]]
-    title = "Second Opinion (Any Problem)"
+    title = "Investigative Business Development"
     description = "Sometimes you just need an unbiased perspective — no assumptions, no agenda."
+
+  [[params.services]]
+    title = "Timeline Forecast"
+    description = "Real-time systems are few that do work consistently without losing quality over communications."
 
   # 🔥 PROCESS (kept simple, aligned with phone-first model)
   [[params.process]]
