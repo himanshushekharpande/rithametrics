@@ -19,79 +19,96 @@ enableRobotsTXT = true
   facebook = "https://www.facebook.com/rithametrics/"
   instagram = "https://www.instagram.com/rithametrics/"
 
-  # 🔥 CORE POSITIONING (UPDATED)
+  # ─── CORE POSITIONING ────────────────────────────────────────────────────────
   subtitle = "Clarity for Any Problem. No Bias. No Agenda."
-  description = "If something feels off — in business, decisions, or life — get a second opinion that is structured, unbiased, and focused on your outcome."
+  description = "When something feels off — in business, decisions, or life — you deserve a second opinion that is structured, honest, and focused entirely on your outcome."
 
-  # 🔥 CONTACT (SINGLE SOURCE OF TRUTH)
-  call_number = "+918860860737"
-  whatsapp = "https://wa.me/918860860737"
-  email = "support@rithametrics.com"
+  # ─── CONTACT ─────────────────────────────────────────────────────────────────
+  call_number      = "+918860860737"
+  call_display     = "+91 88608 60737"
+  whatsapp         = "https://wa.me/918860860737"
+  email            = "support@rithametrics.com"
+  website          = "https://rithametrics.com"
 
-  # 🔥 SERVICES → reframed as problem domains
+  # ─── SERVICES ────────────────────────────────────────────────────────────────
+  # Framed as problem domains — not service categories
   [[params.services]]
+    icon = "⚙️"
     title = "Business & Work Problems"
-    description = "Confusion in strategy, execution, or direction — get clarity on what actually matters."
+    description = "Strategy that stalls, execution that drifts, direction that feels unclear — we cut through the noise and identify what actually needs to change."
 
   [[params.services]]
+    icon = "🌐"
     title = "Website & Funnel Issues"
-    description = "If something isn’t converting or performing, identify the real bottleneck."
+    description = "If your digital presence isn't converting or performing, we find the real bottleneck — not symptoms, but root cause."
 
   [[params.services]]
+    icon = "🧭"
     title = "Decision Confusion"
-    description = "When choices feel overwhelming, break them down into clear, rational paths."
+    description = "When choices feel overwhelming, we break them down into structured, rational paths — so you move forward with confidence, not compromise."
 
   [[params.services]]
+    icon = "🔍"
     title = "Investigative Business Development"
-    description = "Sometimes you just need an unbiased perspective — no assumptions, no agenda."
+    description = "An unbiased external perspective — no assumptions carried in, no agenda driving the output. Just rigorous inquiry and honest findings."
 
   [[params.services]]
-    title = "Timeline Forecast"
-    description = "Real-time systems are few that do work consistently without losing quality over communications."
+    icon = "📅"
+    title = "Timeline & Execution Forecasting"
+    description = "Most plans fail not from bad ideas but from poor sequencing. We map your execution timeline with realistic milestones and communication checkpoints."
 
-  # 🔥 PROCESS (kept simple, aligned with phone-first model)
+  # ─── PROCESS ─────────────────────────────────────────────────────────────────
   [[params.process]]
     step = "01"
     title = "Reach Out"
-    description = "Call or WhatsApp with your situation."
+    description = "Call or WhatsApp with your situation — no forms, no intake questionnaires. A real conversation starts it."
 
   [[params.process]]
     step = "02"
     title = "Clarify"
-    description = "We break down the problem to its core."
+    description = "We break the problem down to its actual core — separating noise from signal, urgency from importance."
 
   [[params.process]]
     step = "03"
     title = "Consult"
-    description = "You get direct, structured guidance."
+    description = "You receive direct, structured guidance — no jargon, no padding. Honest analysis built around your context."
 
   [[params.process]]
     step = "04"
     title = "Act"
-    description = "You decide and execute with clarity."
+    description = "You leave with clarity on your next move. You decide, you execute — with a framework that holds under pressure."
 
-  # 🔥 CONTACT (CLEAN + TRUSTED)
+  # ─── TRUST SIGNALS ───────────────────────────────────────────────────────────
+  [[params.trust]]
+    icon = "🎯"
+    title = "Unbiased Perspective"
+    description = "No product to sell. No service to push. No referral fee waiting on the other side. Only the clearest path forward for you."
+
+  [[params.trust]]
+    icon = "🤝"
+    title = "Direct Access"
+    description = "You speak directly with the person analyzing your problem — not a team, not a bot, not a junior relay. One conversation, one brain, full accountability."
+
+  [[params.trust]]
+    icon = "💛"
+    title = "Pay What You Feel"
+    description = "Value first. Payment after — entirely on your terms. UPI after consultation. No invoice pressure, no fixed fee gate."
+
+  # ─── CONTACT DISPLAY ─────────────────────────────────────────────────────────
   [[params.contact]]
+    icon = "📞"
     name = "Call"
-    value = "+918860860737"
+    value = "+91 88608 60737"
+    href = "tel:+918860860737"
 
   [[params.contact]]
+    icon = "💬"
     name = "WhatsApp"
-    value = "https://wa.me/918860860737"
+    value = "Chat on WhatsApp"
+    href = "https://wa.me/918860860737"
 
   [[params.contact]]
+    icon = "📧"
     name = "Email"
     value = "support@rithametrics.com"
-
-  # 🔥 TRUST (CRITICAL FOR YOUR MODEL)
-  [[params.trust]]
-    title = "Unbiased Perspective"
-    description = "No product to sell. No service to push. Only clarity."
-
-  [[params.trust]]
-    title = "Direct Access"
-    description = "You speak directly with the person analyzing your problem."
-
-  [[params.trust]]
-    title = "Pay What You Feel"
-    description = "Value first. Payment after — based on your judgment."
+    href = "mailto:support@rithametrics.com"

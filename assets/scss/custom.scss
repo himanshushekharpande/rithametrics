@@ -1,8 +1,15 @@
+// ─── BRAND COLOUR TOKENS ────────────────────────────────────────────────────
+// These override the theme's default cyan palette with Rithametrics' mustard identity.
+// All components reference these vars — never hardcode hex in templates.
+
 :root {
-  --primary-color: #F0D038;   // mustard — gradients, logo, headings
+  --primary-color:   #F0D038; // mustard — primary actions, headings, links
   --secondary-color: #E8C055; // tuscan sun — gradient pair
-  --accent-color: #CC2200;    // darkened red — buttons & highlights, not pure #FF0000
+  --accent-color:    #CC2200; // darkened red — highlights only, not primary CTA
 }
+
+
+// ─── LOGO ────────────────────────────────────────────────────────────────────
 
 .logo {
   display: flex;
@@ -13,11 +20,16 @@
 }
 
 .logo-text {
-  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  display: inline-flex;
+  align-items: baseline;
+  background: none;
+  -webkit-text-fill-color: initial;
+  font-weight: 700;
+  letter-spacing: 0.05em;
 }
+
+.logo-text-primary   { color: #F0D038; }  // RITHA — mustard gold
+.logo-text-secondary { color: #E8E8E8; }  // METRICS — off-white slate
 
 .logo-icon {
   height: 32px;
@@ -25,7 +37,33 @@
   display: block;
 }
 
-// ─── Navbar Social Icons (Desktop) ───────────────────────────────────────────
+
+// ─── SECTION INTRO ───────────────────────────────────────────────────────────
+// Subheading beneath each section h2 — sets context, reduces cognitive load.
+
+.section-intro {
+  text-align: center;
+  font-size: 1.05rem;
+  opacity: 0.75;
+  max-width: 640px;
+  margin: -1rem auto 2rem;
+  line-height: 1.7;
+}
+
+
+// ─── TRUST CARDS ─────────────────────────────────────────────────────────────
+// Inherits .portfolio-item styling but adds a left-border accent for distinction.
+
+.trust-card {
+  border-left: 3px solid var(--primary-color);
+
+  h3 {
+    color: var(--primary-color);
+  }
+}
+
+
+// ─── NAVBAR SOCIAL ICONS (DESKTOP) ───────────────────────────────────────────
 
 .nav-social-icons {
   display: flex;
@@ -52,9 +90,7 @@
   }
 }
 
-// ─── Fix: theme's .social-icon (60px circles) bleeds into nav SVGs ───────────
-// The theme uses .social-icon for large card icons. Scoping to nav resets them.
-
+// Fix: theme's .social-icon (60px circles) bleeds into nav SVGs.
 nav .social-icon {
   width: 20px !important;
   height: 20px !important;
@@ -67,16 +103,15 @@ nav .social-icon {
   font-size: unset !important;
 }
 
-// ─── Mobile Menu ─────────────────────────────────────────────────────────────
 
-// Hide desktop social icon block on mobile (they appear inside the menu instead)
+// ─── MOBILE MENU ─────────────────────────────────────────────────────────────
+
 @media (max-width: 768px) {
   .nav-social-icons {
     display: none;
   }
 }
 
-// Hide desktop-social items by default; show only inside open mobile menu
 .desktop-social {
   display: none !important;
 }
@@ -100,7 +135,6 @@ nav .social-icon {
   }
 }
 
-// Hide mobile-only items on desktop
 .mobile-only {
   display: none;
 }
@@ -111,7 +145,8 @@ nav .social-icon {
   }
 }
 
-// ─── Desktop Layout ───────────────────────────────────────────────────────────
+
+// ─── DESKTOP NAV LAYOUT ───────────────────────────────────────────────────────
 
 @media (min-width: 769px) {
   .nav-container {
@@ -125,8 +160,6 @@ nav .social-icon {
     margin-right: 0;
   }
 }
-
-// ─── Mobile Nav Fixes ─────────────────────────────────────────────────────────
 
 @media (max-width: 768px) {
   .nav-container {
@@ -151,7 +184,8 @@ nav .social-icon {
   }
 }
 
-// ─── Process Section ──────────────────────────────────────────────────────────
+
+// ─── PROCESS SECTION ──────────────────────────────────────────────────────────
 
 .process-flow {
   display: flex;
@@ -187,6 +221,7 @@ nav .social-icon {
   font-weight: bold;
   font-size: 1.2rem;
   color: #000000;
+  flex-shrink: 0;
 }
 
 .process-body h3 {
@@ -201,7 +236,8 @@ nav .social-icon {
   line-height: 1.7;
 }
 
-// ─── WhatsApp Float Button ────────────────────────────────────────────────────
+
+// ─── WHATSAPP FLOAT BUTTON ────────────────────────────────────────────────────
 
 .whatsapp-float {
   position: fixed;
@@ -226,7 +262,8 @@ nav .social-icon {
   }
 }
 
-// ─── Background Video ─────────────────────────────────────────────────────────
+
+// ─── BACKGROUND VIDEO ─────────────────────────────────────────────────────────
 
 .has-video-bg {
   position: relative !important;
@@ -266,7 +303,8 @@ nav .social-icon {
   }
 }
 
-// ─── Theme Color Overrides ────────────────────────────────────────────────────
+
+// ─── THEME COLOUR OVERRIDES ───────────────────────────────────────────────────
 
 .hero {
   background: radial-gradient(circle at 50% 50%, rgba(240, 208, 56, 0.1) 0%, transparent 50%);
@@ -301,15 +339,17 @@ nav .social-icon {
   }
 }
 
-// ─── Typography ───────────────────────────────────────────────────────────────
+
+// ─── TYPOGRAPHY ───────────────────────────────────────────────────────────────
 
 .hero-content {
   h1 {
-    font-size: clamp(3rem, 6vw, 5rem);
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1.2;
   }
 
   p {
-    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    font-size: clamp(1.05rem, 2.5vw, 1.4rem);
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -317,13 +357,15 @@ nav .social-icon {
 }
 
 .content-section h2 {
+  display: block;
   font-size: clamp(2rem, 4vw, 3rem);
 }
 
 .portfolio-content {
   h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin-bottom: 0.6rem;
+    color: var(--primary-color);
   }
 
   p {
@@ -337,7 +379,8 @@ nav .social-icon {
   opacity: 0.85;
 }
 
-// ─── Footer ───────────────────────────────────────────────────────────────────
+
+// ─── FOOTER ───────────────────────────────────────────────────────────────────
 
 @media (max-width: 768px) {
   .footer-sep {

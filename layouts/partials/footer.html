@@ -1,29 +1,45 @@
-<footer style="background: rgba(0, 0, 0, 0.3); padding: 2rem 0; margin-top: 4rem; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+<footer style="background: rgba(0, 0, 0, 0.3); padding: 2rem 0; margin-top: 4rem; text-align: center; border-top: 1px solid var(--glass-border);">
     <div class="container">
 
-        <!-- TRUST LINE -->
-        <p style="color: #aaa; margin-bottom: 0.5rem;">
-            Unbiased consultation. Direct conversation. Pay what you feel.
+        <!-- BRAND -->
+        <p style="font-size: 1.1rem; font-weight: bold; margin-bottom: 0.4rem;">
+          <span style="background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+            RITHAMETRICS
+          </span>
         </p>
 
-        <!-- CONTACT -->
+        <!-- TRUST LINE -->
+        <p style="color: #aaa; margin-bottom: 1rem; font-size: 0.9rem; letter-spacing: 0.04em;">
+            Integrated Talent &amp; Organizational Development Consulting &nbsp;·&nbsp; No Bias. No Agenda. No Fixed Fee.
+        </p>
+
+        <!-- CONTACT LINKS -->
         <p style="margin-bottom: 1rem;">
-          <a href="tel:{{ .Site.Params.call_number }}" style="color:#00d4ff; text-decoration:none;">📞 Call</a>
-          <span class="footer-sep"> • </span>
-          <a href="{{ .Site.Params.whatsapp }}" target="_blank" style="color:#00d4ff; text-decoration:none;">💬 WhatsApp</a>
-          <span class="footer-sep"> • </span>
-          <a href="mailto:{{ .Site.Params.email }}" style="color:#00d4ff; text-decoration:none;">📧 Email</a>
+          <a href="tel:{{ .Site.Params.call_number }}" style="color: var(--primary-color); text-decoration: none;">📞 {{ .Site.Params.call_display }}</a>
+          <span class="footer-sep"> &nbsp;·&nbsp; </span>
+          <a href="{{ .Site.Params.whatsapp }}" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); text-decoration: none;">💬 WhatsApp</a>
+          <span class="footer-sep"> &nbsp;·&nbsp; </span>
+          <a href="mailto:{{ .Site.Params.email }}" style="color: var(--primary-color); text-decoration: none;">📧 {{ .Site.Params.email }}</a>
+          <span class="footer-sep"> &nbsp;·&nbsp; </span>
+          <a href="{{ .Site.Params.website }}" style="color: var(--primary-color); text-decoration: none;">🌐 rithametrics.com</a>
+        </p>
+
+        <!-- SOCIAL -->
+        <p style="margin-bottom: 1rem;">
+          <a href="{{ .Site.Params.facebook }}" target="_blank" rel="noopener noreferrer" style="color: #aaa; text-decoration: none; margin: 0 0.5rem;">Facebook</a>
+          <span style="color: #555;">·</span>
+          <a href="{{ .Site.Params.instagram }}" target="_blank" rel="noopener noreferrer" style="color: #aaa; text-decoration: none; margin: 0 0.5rem;">Instagram</a>
         </p>
 
         <!-- COPYRIGHT -->
-        <p style="color: #888; margin: 0;">
-            © {{ now.Year }} Rithametrics
+        <p style="color: #555; margin: 0; font-size: 0.82rem;">
+            © {{ now.Year }} Rithametrics &nbsp;·&nbsp; Prayagraj, India &nbsp;·&nbsp; All rights reserved.
         </p>
 
     </div>
 </footer>
 
-<!-- 🔥 STICKY WHATSAPP BUTTON -->
-<a href="{{ .Site.Params.whatsapp }}" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+<!-- ─── STICKY WHATSAPP BUTTON ─────────────────────────────────────────────── -->
+<a href="{{ .Site.Params.whatsapp }}" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
   💬
 </a>

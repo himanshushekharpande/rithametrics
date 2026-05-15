@@ -1,6 +1,8 @@
 {{ define "main" }}
 
-<!-- HERO -->
+<!-- ═══════════════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════════════════ -->
 <section class="hero has-video-bg">
   <div class="video-bg-wrap">
     <video autoplay loop muted playsinline preload="auto">
@@ -10,31 +12,35 @@
     <div class="video-bg-overlay"></div>
   </div>
   <div class="hero-content">
-    <h1>{{ .Site.Title }}</h1>
-    <p>{{ .Site.Params.subtitle }}</p>
+    <h1>{{ .Site.Params.subtitle }}</h1>
     <p>{{ .Site.Params.description }}</p>
     <div class="cta-buttons">
-      <a href="tel:{{ .Site.Params.call_number }}" class="btn btn-primary">📞 Call Now</a>
-      <a href="{{ .Site.Params.whatsapp }}" class="btn btn-secondary">💬 WhatsApp</a>
+      <a href="tel:{{ .Site.Params.call_number }}" class="btn btn-primary">📞 Call {{ .Site.Params.call_display }}</a>
+      <a href="{{ .Site.Params.whatsapp }}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">💬 WhatsApp</a>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SERVICES — "Where Do You Need Clarity?"
+════════════════════════════════════════════════════════════════ -->
 <section id="services" class="content-section active has-video-bg">
   <div class="video-bg-wrap">
     <video autoplay loop muted playsinline preload="auto">
-      <source src="/videos/services-bg.webm" type="video/webm">
+      <source src="/videos/process-bg-opt.webm" type="video/webm">
+      <source src="/videos/process-bg.webm" type="video/webm">
     </video>
     <div class="video-bg-overlay"></div>
   </div>
   <div class="container">
-    <h2>What You Get</h2>
+    <h2>Where Do You Need Clarity?</h2>
+    <p class="section-intro">Every engagement starts with a problem — not a package. Pick the domain closest to yours.</p>
     <div class="portfolio-grid">
       {{ range .Site.Params.services }}
       <div class="portfolio-item">
         <div class="portfolio-content">
-          <h3>{{ .title }}</h3>
+          <h3>{{ .icon }} {{ .title }}</h3>
           <p>{{ .description }}</p>
         </div>
       </div>
@@ -43,16 +49,42 @@
   </div>
 </section>
 
-<!-- PROCESS -->
+
+<!-- ═══════════════════════════════════════════════════════════════
+     TRUST — "Why Rithametrics?"
+════════════════════════════════════════════════════════════════ -->
+<section id="trust" class="content-section active">
+  <div class="container">
+    <h2>Why Rithametrics?</h2>
+    <p class="section-intro">Three principles that make this different from every other consultation you've had.</p>
+    <div class="portfolio-grid">
+      {{ range .Site.Params.trust }}
+      <div class="portfolio-item trust-card">
+        <div class="portfolio-content">
+          <h3>{{ .icon }} {{ .title }}</h3>
+          <p>{{ .description }}</p>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PROCESS — "How It Works"
+════════════════════════════════════════════════════════════════ -->
 <section id="process" class="content-section active has-video-bg">
   <div class="video-bg-wrap">
     <video autoplay loop muted playsinline preload="auto">
-      <source src="/videos/process-bg.webm" type="video/webm">
+      <source src="/videos/hero-bg-opt.webm" type="video/webm">
+      <source src="/videos/hero-bg.webm" type="video/webm">
     </video>
     <div class="video-bg-overlay"></div>
   </div>
   <div class="container">
     <h2>How It Works</h2>
+    <p class="section-intro">Four steps. One conversation. No overhead.</p>
     <div class="process-flow">
       {{ range .Site.Params.process }}
       <div class="process-step">
@@ -67,32 +99,33 @@
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="content-section active has-video-bg">
-  <div class="video-bg-wrap">
-    <video autoplay loop muted playsinline preload="auto">
-      <source src="/videos/contact-bg.webm" type="video/webm">
-    </video>
-    <div class="video-bg-overlay"></div>
-  </div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     CONTACT — "Get in Touch"
+════════════════════════════════════════════════════════════════ -->
+<section id="contact" class="content-section active">
   <div class="container">
-    <h2>Get in Touch</h2>
-    <div class="portfolio-grid">
+    <h2>Start the Conversation</h2>
+    <p class="section-intro">No intake form. No waiting room. Reach out directly and we'll begin.</p>
+    <div class="portfolio-grid contact-grid">
       {{ range .Site.Params.contact }}
-      <div class="portfolio-item">
+      <div class="portfolio-item contact-card">
         <div class="portfolio-content">
           <h3>{{ .icon }} {{ .name }}</h3>
-          <p>{{ .value }}</p>
+          <p><a href="{{ .href }}" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); text-decoration: none;">{{ .value }}</a></p>
         </div>
       </div>
       {{ end }}
     </div>
-    <div style="text-align:center; margin-top:2rem;">
-      <a href="tel:{{ .Site.Params.call_number }}" class="btn btn-primary">📞 Call</a>
-      <a href="{{ .Site.Params.whatsapp }}" class="btn btn-secondary">💬 WhatsApp</a>
+
+    <div style="text-align:center; margin-top:2.5rem;">
+      <a href="tel:{{ .Site.Params.call_number }}" class="btn btn-primary">📞 Call Now</a>
+      &nbsp;
+      <a href="{{ .Site.Params.whatsapp }}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">💬 WhatsApp</a>
     </div>
-    <p style="text-align:center; margin-top:1rem;">
-      <strong>Payment:</strong> Pay what you feel via UPI after consultation.
+
+    <p style="text-align:center; margin-top:1.5rem; opacity:0.7; font-size:0.95rem;">
+      💛 Pay what you feel — via UPI after consultation. No invoice. No pressure.
     </p>
   </div>
 </section>
