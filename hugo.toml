@@ -13,6 +13,7 @@ enableRobotsTXT = true
   tag = "tags"
 
 [params]
+  googleAnalytics = "G-H6S22CQS9Z"
   author = "Rithametrics"
   logo = "RITHAMETRICS"
   logoImage = "images/logo-web.webp"
